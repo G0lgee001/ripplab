@@ -15,7 +15,7 @@ function updateLogosForTheme(theme) {
     const footerLogo = document.querySelector('.footer .logo-img');
     if (!headerLogo || !footerLogo) return;
     if (theme === 'dark') {
-        headerLogo.src = 'assets/logo-0b1220.png';
+        headerLogo.src = 'assets/logo-030818.png';
         footerLogo.src = 'assets/logo-030818.png';
     } else {
         headerLogo.src = 'assets/logo-ffffff.png';
