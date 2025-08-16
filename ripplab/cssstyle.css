@@ -796,9 +796,14 @@ body.theme-dark {
 
 /* About section normalization (no frame, no gradient) */
 .about-content {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* Align dark-mode header logo by R letter position */
+.theme-dark .header .logo-img {
+	object-position: center 52%;
 }
 
 .about {

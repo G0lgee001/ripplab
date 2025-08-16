@@ -801,6 +801,11 @@ body.theme-dark {
     box-shadow: none !important;
 }
 
+/* Align dark-mode header logo by R letter position */
+.theme-dark .header .logo-img {
+    object-position: center 52%;
+}
+
 .about {
     border: 0 !important;
 }
