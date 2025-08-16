@@ -789,3 +789,22 @@ body.theme-dark {
     color: var(--text-primary) !important;
     border-top-color: rgba(0, 0, 0, 0.06) !important;
 }
+
+/* About section normalization (no frame, no gradient) */
+.about-content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.about {
+    border: 0 !important;
+}
+
+.theme-light .about {
+    background: var(--white) !important;
+}
+
+.theme-dark .about {
+    background: #0f172a !important;
+}
