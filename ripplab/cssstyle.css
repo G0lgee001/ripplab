@@ -699,8 +699,10 @@ body.theme-dark {
 }
 
 .theme-dark .header {
-    background: rgba(2, 6, 23, 0.75);
+    background: rgba(2, 6, 23, 0.92) !important;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 .theme-dark .music-player {
