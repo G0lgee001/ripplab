@@ -468,7 +468,7 @@ body {
     height: 40px;
     background: var(--primary-blue);
     color: var(--white);
-    border-size: 50%;
+    border-radius: 50%;
     text-decoration: none;
     transition: all 0.3s ease;
 }

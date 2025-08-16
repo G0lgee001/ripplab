@@ -238,6 +238,7 @@ function enhanceWaveAnimation() {
 // Initialize Wave Animation Enhancement
 document.addEventListener('DOMContentLoaded', () => {
     enhanceWaveAnimation();
+    updateTrackInfo();
     
     // Add loading animation
     document.body.classList.add('loaded');
