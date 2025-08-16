@@ -1,6 +1,6 @@
-# 🌊 Ripplab - Müzik Deneyimi
+# 🌊 Ripplab - Müzik Pazaryeri
 
-Modern ve etkileyici bir müzik platformu. Su dalgalarının huzuru ile ses dalgalarının büyüsünü birleştirerek, size benzersiz bir müzik deneyimi sunuyoruz.
+Üreticilerin eserlerini satabildiği, dinleyicilerin güvenle satın alabildiği modern bir müzik pazaryeri. Dalgalar gibi akışkan, hızlı ve güvenli.
 
 ## ✨ Özellikler
 
