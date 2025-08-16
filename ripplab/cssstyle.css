@@ -414,6 +414,12 @@ body {
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+/* Force light footer surface when theme-light is active */
+.theme-light .footer {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+}
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
