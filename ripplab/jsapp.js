@@ -10,6 +10,19 @@ const progressFill = document.querySelector('.progress-fill');
 const ctaButton = document.querySelector('.cta-button');
 const themeToggleBtn = document.querySelector('.theme-toggle');
 
+function updateLogosForTheme(theme) {
+    const headerLogo = document.querySelector('.header .logo-img');
+    const footerLogo = document.querySelector('.footer .logo-img');
+    if (!headerLogo || !footerLogo) return;
+    if (theme === 'dark') {
+        headerLogo.src = 'assets/logo-0b1220.png';
+        footerLogo.src = 'assets/logo-030818.png';
+    } else {
+        headerLogo.src = 'assets/logo-ffffff.png';
+        footerLogo.src = 'assets/logo-030818.png';
+    }
+}
+
 // Sample Music Data
 const musicData = [
     {
@@ -317,9 +330,9 @@ function applyTheme(theme) {
 
     try {
         localStorage.setItem('theme', theme);
-    } catch (_) {
-        // ignore storage errors
-    }
+    } catch (_) {}
+
+    updateLogosForTheme(theme);
 }
 
 function initializeTheme() {
