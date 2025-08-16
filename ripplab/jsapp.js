@@ -8,6 +8,7 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const progressFill = document.querySelector('.progress-fill');
 const ctaButton = document.querySelector('.cta-button');
+const themeToggleBtn = document.querySelector('.theme-toggle');
 
 // Sample Music Data
 const musicData = [
@@ -239,6 +240,7 @@ function enhanceWaveAnimation() {
 document.addEventListener('DOMContentLoaded', () => {
     enhanceWaveAnimation();
     updateTrackInfo();
+    initializeTheme();
     
     // Add loading animation
     document.body.classList.add('loaded');
@@ -299,3 +301,41 @@ console.log(`
 🚀 Built with modern web technologies
 ✨ Enjoy the smooth animations and beautiful design
 `);
+
+// THEME: Dark/Light toggle support
+function applyTheme(theme) {
+    const isDarkMode = theme === 'dark';
+    document.body.classList.toggle('theme-dark', isDarkMode);
+
+    const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    if (icon) {
+        icon.classList.toggle('fa-moon', !isDarkMode);
+        icon.classList.toggle('fa-sun', isDarkMode);
+    }
+
+    try {
+        localStorage.setItem('theme', theme);
+    } catch (_) {
+        // ignore storage errors
+    }
+}
+
+function initializeTheme() {
+    let savedTheme = null;
+    try {
+        savedTheme = localStorage.getItem('theme');
+    } catch (_) {
+        savedTheme = null;
+    }
+
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const themeToApply = savedTheme || (prefersDark ? 'dark' : 'light');
+    applyTheme(themeToApply);
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
+        applyTheme(nextTheme);
+    });
+}

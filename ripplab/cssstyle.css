@@ -538,3 +538,184 @@ body {
         padding: 2rem 1rem;
     }
 }
+
+/* ==========================
+   Modern UI Enhancements
+   ========================== */
+
+/* Decorative gradient blobs */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+body::before {
+    top: -200px;
+    left: -150px;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.30), rgba(6, 182, 212, 0.00) 60%);
+}
+
+body::after {
+    right: -150px;
+    bottom: -200px;
+    background: radial-gradient(circle at center, rgba(6, 182, 212, 0.30), rgba(59, 130, 246, 0.00) 60%);
+}
+
+/* Glassmorphism cards */
+.player-container,
+.playlist-card,
+.about-content {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Card shine effect */
+.playlist-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 220%;
+    height: 220%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0) 60%);
+    transform: rotate(25deg) translateX(0);
+    transition: transform 0.6s ease;
+}
+
+.playlist-card:hover::after {
+    transform: rotate(25deg) translateX(35%);
+}
+
+/* Richer hover interactions */
+.playlist-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.control-btn:hover {
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.25);
+}
+
+/* CTA button shine */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.cta-button:hover::after {
+    transform: translateX(100%);
+}
+
+/* Progress bar with animated gradient and shine */
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
+    background-size: 200% 100%;
+    animation: progressGradient 3s ease infinite;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    right: -40px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
+    animation: progressShine 2s linear infinite;
+}
+
+@keyframes progressGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes progressShine {
+    0% { right: -40px; }
+    100% { right: 100%; }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: var(--light-gray);
+    color: var(--primary-blue);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: var(--shadow);
+}
+
+/* Focus styles */
+:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Dark Theme */
+.theme-dark {
+    --white: #0b1220;
+    --light-gray: #0f172a;
+    --text-primary: #e5e7eb;
+    --text-secondary: #94a3b8;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.theme-dark .theme-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.theme-dark .player-container,
+.theme-dark .playlist-card,
+.theme-dark .about-content {
+    background: rgba(17, 24, 39, 0.55);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.theme-dark .footer {
+    background: #0b1220;
+}
+
+/* Adjust decorative blobs for dark */
+.theme-dark::before,
+.theme-dark::after {
+    opacity: 0.7;
+    filter: blur(110px);
+}
