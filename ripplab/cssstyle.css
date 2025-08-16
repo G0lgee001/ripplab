@@ -688,12 +688,50 @@ body::after {
 
 /* Dark Theme */
 .theme-dark {
-    --white: #0b1220;
-    --light-gray: #0f172a;
     --text-primary: #e5e7eb;
     --text-secondary: #94a3b8;
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+body.theme-dark {
+    background: linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
+}
+
+.theme-dark .header {
+    background: rgba(2, 6, 23, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+.theme-dark .music-player {
+    background: linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
+}
+
+.theme-dark .about {
+    background: linear-gradient(135deg, #0f172a 0%, #0b1220 100%);
+}
+
+.theme-dark .footer {
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+.theme-dark .footer-links a {
+    color: #94a3b8;
+}
+
+.theme-dark .footer-bottom {
+    color: #94a3b8;
+    border-top-color: rgba(148, 163, 184, 0.4);
+}
+
+.theme-dark .social-link {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+}
+
+.theme-dark .nav-menu.active {
+    background: rgba(2, 6, 23, 0.95) !important;
 }
 
 .theme-dark .theme-toggle {
