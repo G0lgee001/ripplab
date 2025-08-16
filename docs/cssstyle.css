@@ -802,20 +802,6 @@ body.theme-dark {
     text-align: center;
 }
 
-.about-logo-img {
-    width: 220px;
-    height: 220px;
-    object-fit: contain;
-    margin: 1.5rem auto 0;
-}
-
-.theme-dark .about-logo-img {
-    content: url('assets/logo-0b1220.png');
-}
-
-.theme-light .about-logo-img {
-    content: url('assets/logo-ffffff.png');
-}
 
 /* Align dark-mode header logo by R letter position */
 .theme-dark .header .logo-img {
