@@ -305,11 +305,13 @@ console.log(`
 // THEME: Dark/Light toggle support
 function applyTheme(theme) {
     const isDarkMode = theme === 'dark';
+    const isLightMode = theme === 'light';
     document.body.classList.toggle('theme-dark', isDarkMode);
+    document.body.classList.toggle('theme-light', isLightMode);
 
     const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
     if (icon) {
-        icon.classList.toggle('fa-moon', !isDarkMode);
+        icon.classList.toggle('fa-moon', isLightMode);
         icon.classList.toggle('fa-sun', isDarkMode);
     }
 

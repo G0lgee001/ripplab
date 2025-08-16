@@ -761,3 +761,25 @@ body.theme-dark {
     opacity: 0.7;
     filter: blur(110px);
 }
+
+/* Explicit Light Theme surfaces */
+.theme-light .header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.theme-light .music-player {
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%) !important;
+}
+
+.theme-light .about {
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%) !important;
+}
+
+.theme-light .footer {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    border-top-color: rgba(0, 0, 0, 0.06) !important;
+}
