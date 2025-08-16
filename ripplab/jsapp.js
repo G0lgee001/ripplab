@@ -16,10 +16,10 @@ function updateLogosForTheme(theme) {
     if (!headerLogo || !footerLogo) return;
     if (theme === 'dark') {
         headerLogo.src = 'assets/logo-030818.png';
-        footerLogo.src = 'assets/logo-030818.png';
+        footerLogo.src = 'assets/logo-0b1220.png';
     } else {
         headerLogo.src = 'assets/logo-ffffff.png';
-        footerLogo.src = 'assets/logo-030818.png';
+        footerLogo.src = 'assets/logo-ffffff.png';
     }
 }
 
